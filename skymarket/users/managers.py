@@ -2,6 +2,7 @@ from django.contrib.auth.models import (
     BaseUserManager
 )
 
+
 class UserManager(BaseUserManager):
     def create_user(self, email, first_name, last_name, phone, password=None):
         """
@@ -23,7 +24,7 @@ class UserManager(BaseUserManager):
 
         return user
 
-    def create_superuser(self, email, first_name, last_name, phone, password=None):
+    def create_superuser(self, email, first_name, last_name, phone, role, password=None):
         """
         Creates and saves a superuser with the given email, date of
         birth and password.
